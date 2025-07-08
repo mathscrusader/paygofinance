@@ -1,0 +1,241 @@
+
+PROJECT STRUCTURE
+================
+📄 .env
+📁 app
+  📁 admin
+    📁 analytics
+      📄 page.tsx
+    📁 approvals
+      📄 loading.tsx
+      📄 page.tsx
+    📄 layout.tsx
+    📁 notifications
+      📄 page.tsx
+    📄 page.tsx
+    📁 pricing
+      📄 page.tsx
+    📁 settings
+      📄 page.tsx
+    📁 users
+      📄 loading.tsx
+      📄 page.tsx
+  📁 airtime
+    📄 page.tsx
+  📁 api
+    📁 fund-wallet
+      📄 route.ts
+    📁 login
+      📄 route.ts
+    📁 me
+      📄 route.ts
+    📁 register
+      📄 route.ts
+    📁 transactions
+      📄 route.ts
+    📁 transfer
+      📄 route.ts
+  📁 dashboard
+    📄 layout.tsx
+    📄 page.tsx
+    📁 settings
+      📄 page.tsx
+    📁 vtu
+      📄 page.tsx
+  📁 data
+    📄 page.tsx
+  📁 earn
+    📄 page.tsx
+  📄 globals.css
+  📁 join-group
+    📄 page.tsx
+  📄 layout.tsx
+  📁 login
+    📄 page.tsx
+  📁 packages
+    📄 page.tsx
+  📄 page.tsx
+  📁 profile
+    📄 page.tsx
+  📁 register
+    📄 page.tsx
+  📁 support
+    📄 page.tsx
+  📁 upgrade
+    📄 page.tsx
+  📁 videos
+    📄 page.tsx
+📁 components
+  📄 admin-sidebar.tsx
+  📄 footer.tsx
+  📄 header.tsx
+  📄 network-logo-3d.tsx
+  📄 theme-provider.tsx
+  📁 ui
+    📄 accordion.tsx
+    📄 alert-dialog.tsx
+    📄 alert.tsx
+    📄 aspect-ratio.tsx
+    📄 avatar.tsx
+    📄 badge.tsx
+    📄 breadcrumb.tsx
+    📄 button.tsx
+    📄 calendar.tsx
+    📄 card.tsx
+    📄 carousel.tsx
+    📄 chart.tsx
+    📄 checkbox.tsx
+    📄 collapsible.tsx
+    📄 command.tsx
+    📄 context-menu.tsx
+    📄 dialog.tsx
+    📄 drawer.tsx
+    📄 dropdown-menu.tsx
+    📄 form.tsx
+    📄 hover-card.tsx
+    📄 input-otp.tsx
+    📄 input.tsx
+    📄 label.tsx
+    📄 menubar.tsx
+    📄 navigation-menu.tsx
+    📄 pagination.tsx
+    📄 popover.tsx
+    📄 progress.tsx
+    📄 radio-group.tsx
+    📄 resizable.tsx
+    📄 scroll-area.tsx
+    📄 select.tsx
+    📄 separator.tsx
+    📄 sheet.tsx
+    📄 sidebar.tsx
+    📄 skeleton.tsx
+    📄 slider.tsx
+    📄 sonner.tsx
+    📄 switch.tsx
+    📄 table.tsx
+    📄 tabs.tsx
+    📄 textarea.tsx
+    📄 toast.tsx
+    📄 toaster.tsx
+    📄 toggle-group.tsx
+    📄 toggle.tsx
+    📄 tooltip.tsx
+    📄 use-mobile.tsx
+    📄 use-toast.ts
+  📄 user-sidebar.tsx
+  📄 WalletScene.tsx
+📄 components.json
+📁 constants
+  📄 conversion.ts
+📁 contexts
+  📄 currency-context.tsx
+📁 hooks
+  📄 use-mobile.tsx
+  📄 use-toast.ts
+📁 lib
+  📁 generated
+    📁 prisma
+      📄 client.d.ts
+      📄 client.js
+      📄 default.d.ts
+      📄 default.js
+      📄 edge.d.ts
+      📄 edge.js
+      📄 index-browser.js
+      📄 index.d.ts
+      📄 index.js
+      📄 package.json
+      📄 query_engine-windows.dll.node
+      📁 runtime
+        📄 edge-esm.js
+        📄 edge.js
+        📄 index-browser.d.ts
+        📄 index-browser.js
+        📄 library.d.ts
+        📄 library.js
+        📄 react-native.js
+        📄 wasm-compiler-edge.js
+        📄 wasm-engine-edge.js
+      📄 schema.prisma
+      📄 wasm.d.ts
+      📄 wasm.js
+  📄 utils.ts
+📄 next-env.d.ts
+📄 next.config.mjs
+📄 package.json
+📄 paygo-finance.zip
+📄 pnpm-lock.yaml
+📄 postcss.config.mjs
+📁 prisma
+  📄 dev.db
+  📁 migrations
+    📁 20250706163823_init
+      📄 migration.sql
+    📁 20250706215225_add_receipt_url_to_transaction
+      📄 migration.sql
+    📄 migration_lock.toml
+  📄 schema.prisma
+  📄 seed.ts
+📄 project-scanner.js
+📁 public
+  📁 fonts
+    📄 Geist_Bold.json
+    📄 Geist_Regular.json
+    📄 helvetiker_bold.typeface.json
+    📄 helvetiker_regular.typeface.json
+  📁 images
+    📄 mobile-design.png
+  📄 placeholder-logo.png
+  📄 placeholder-logo.svg
+  📄 placeholder-user.jpg
+  📄 placeholder.jpg
+  📄 placeholder.svg
+  📁 uploads
+    📄 receipt_1751839063997_r5dbsknses.png
+    📄 receipt_1751839334386_xn42mydkin.jpg
+📁 styles
+  📄 globals.css
+📄 tailwind.config.ts
+📄 tsconfig.json
+
+
+IMPORTANT FILES
+===============
+
+=== package.json ===
+{
+  "name": "my-v0-project",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "build": "next build",
+    "dev": "next dev --turbo",
+    "lint": "next lint",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@emotion/is-prop-valid": "latest",
+    "@hookform/resolvers": "^3.9.1",
+    "@prisma/client": "^6.11.1",
+    "@radix-ui/react-accordion": "1.2.2",
+    "@radix-ui/react-alert-dialog": "1.1.4",
+    "@radix-ui/react-aspect-ratio": "1.1.1",
+    "@radix-ui/react-avatar": "latest",
+    "@radix-ui/react-checkbox": "1.1.3",
+    "@radix-ui/react-collapsible": "1.1.2",
+    "@radix-ui/react-context-menu": "2.2.4",
+    "@radix-ui/react-dialog": "1.1.4",
+    "@radix-ui/react-dropdown-menu": "latest",
+    "@radix-ui/react-hover-card": "1.1.4",
+    "@radix-ui/react-label": "2.1.1",
+    "@radix-ui/react-menubar": "1.1.4",
+    "@radix-ui/react-navigation-menu": "1.2.3",
+    "@radix-ui/react-popover": "1.1.4",
+    "@radix-ui/react-progress": "latest",
+    "@radix-ui/react-radio-group": "1.2.2",
+
+=== next.config.js ===
+[Not found or error reading]
+
+=== tailwind.config.js ===
+[Not found or error reading]
