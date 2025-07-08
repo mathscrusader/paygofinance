@@ -26,11 +26,18 @@ export async function POST(req: Request) {
         email,
         password: hashed,
         name,
-      }
+      },
     })
 
-    return NextResponse.json({ message: "User registered.", user: { id: user.id, email: user.email, name: user.name } })
-  } catch (err) {
-    return NextResponse.json({ error: "Registration failed." }, { status: 500 })
+    return NextResponse.json({
+      message: "User registered.",
+      user: { id: user.id, email: user.email, name: user.name },
+    })
+  } catch (err: any) {
+    console.error("🛑 Registration error:", err)
+    return NextResponse.json(
+      { error: err.message || "Registration failed." },
+      { status: 500 }
+    )
   }
 }
