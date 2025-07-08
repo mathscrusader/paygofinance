@@ -1,5 +1,5 @@
 import { NextRequest } from 'next/server'
-import prisma from './prisma'
+import { prisma } from "./prisma"
 
 export async function getCurrentUser(req?: NextRequest) {
   // In a real app, verify JWT token from cookies/headers
